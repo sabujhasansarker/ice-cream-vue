@@ -17,9 +17,8 @@ const app = Vue.createApp({
             this.cart.push(this.variants.find(variant => variant.id === variantId));
         },
         removeFromCart(variantId) {
-            let position = this.cart.findIndex(variant => variant.id === variantId);
-
-            this.cart.splice(position, 1);
+         let position = this.carts.findIndex((cart) => cart.id === id);
+         position !== -1 && this.carts.splice(position, 1);
         },
         toggleModal() {
             this.showModal = !this.showModal;
